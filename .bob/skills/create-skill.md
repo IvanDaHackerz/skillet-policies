@@ -39,44 +39,58 @@ Based on the skill's purpose, determine:
 Reference `../skillet-policies/metadata/roles.json` for valid categories and roles.
 
 ### 5. Generate Structured Skill Markdown
-Create a complete skill file with ALL required sections:
+Create a complete skill file following the EXACT format from `skill-format.md`:
 
+**IMPORTANT**: Use the template from `../skillet-policies/rules/skill-format.md` (lines 156-189).
+
+The skill MUST include these sections in this order:
+
+1. **Title** (H1): Clear, descriptive name
+2. **Description**: 2-3 sentences explaining what it does and when to use it
+3. **Category**: One of: backend, frontend, devops, qa, shared
+4. **Roles**: Comma-separated list (backend, frontend, fullstack, devops, qa)
+5. **Prerequisites**: List of requirements (dependencies, project structure, config files)
+6. **Steps**: Numbered list of actions (minimum 3, recommended 5-10)
+7. **Inputs**: Information needed from user (format: "Field name (type, required/optional): description")
+8. **Outputs**: Files or changes created (format: "File path: description")
+9. **Example Usage**: Concrete example showing user request and expected outcome
+10. **Notes** (optional): Additional information, tips, or context
+
+**Template to follow**:
 ```markdown
 # [Skill Title]
 
 ## Description
-[2-3 sentences explaining what the skill does and when to use it]
+[2-3 sentences]
 
 ## Category
 [backend/frontend/devops/qa/shared]
 
 ## Roles
-[comma-separated list of roles]
+[comma-separated list]
 
 ## Prerequisites
 - [Requirement 1]
 - [Requirement 2]
-- [Requirement 3]
 
 ## Steps
-1. [Clear, actionable step 1]
-2. [Clear, actionable step 2]
-3. [Clear, actionable step 3]
-[... minimum 3 steps, recommended 5-10]
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
 ## Inputs
-- [Input name] (type, required/optional): description
-- [Input name] (type, required/optional): description
+- [Input 1] (type, required/optional): description
+- [Input 2] (type, required/optional): description
 
 ## Outputs
-- [File path or change]: description
-- [File path or change]: description
+- [File path 1]: description
+- [File path 2]: description
 
 ## Example Usage
-[Concrete example showing user request and expected outcome]
+[Concrete example]
 
 ## Notes (optional)
-[Additional information, tips, or context]
+[Additional information]
 ```
 
 ### 6. Ensure Quality Standards
