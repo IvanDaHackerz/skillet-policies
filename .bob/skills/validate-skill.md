@@ -159,6 +159,8 @@ Verify ALL required sections from `../skillet-policies/rules/skill-format.md` ar
 #### Required Sections Checklist
 - ✅ **Title**: Present and descriptive
 - ✅ **Description**: Present, 2-3 sentences, meaningful
+- ✅ **Version**: Present and follows semantic versioning (e.g., 1.0.0, 1.2.3)
+- ✅ **Changes made**: Present for versions > 1.0.0, lists specific changes from previous version (not required for v1.0.0)
 - ✅ **Category**: Present and valid (backend/frontend/devops/qa/shared)
 - ✅ **Roles**: Present and valid (from roles.json)
 - ✅ **Prerequisites**: Present with at least 1 item, not placeholder
