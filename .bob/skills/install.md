@@ -27,10 +27,11 @@ Installs skills from the Skillet GitHub registry into a developer's workspace us
 
 ## Steps
 
-### Step 1: Read skill-index.json
+### Step 1: Read skill-index.json from GitHub
 
-Use the `read_file` tool to read the local `skillet-skills/metadata/skill-index.json`.
+Use the MCP tool `read_skill_file` to fetch `metadata/skill-index.json` from the skillet-skills repository.
 This file contains the registry of all available skills with their metadata and source information.
+The file must be accessed via the GitHub MCP server since it may not be available locally.
 
 ### Step 2: Find Skill Entry
 
