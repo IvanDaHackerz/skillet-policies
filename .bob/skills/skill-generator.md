@@ -60,6 +60,7 @@ Ensure you have all necessary information before proceeding.
 Then, organize the skill content following the exact structure from `skill-format.md`:
 - Title (clear and descriptive)
 - Description (2-3 sentences, explains what and when)
+- **Version** (semantic versioning: 1.0.0 for new skills)
 - Category and Roles
 - Prerequisites (at least 2 items)
 - Inputs table (with name, type, required, description)
@@ -71,6 +72,7 @@ Then, organize the skill content following the exact structure from `skill-forma
 - Related Skills (optional)
 
 Ensure each step uses imperative language ("First, run...", "Next, use...", "Then, execute...") and specifies exact tools or commands.
+For new skills, always start with version **1.0.0**.
 
 ### Step 4: Apply Security Guidelines
 
@@ -97,11 +99,13 @@ Then, ensure all code examples follow `coding-standards.md`:
 
 Verify that generated code examples are production-ready and follow best practices.
 
-### Step 6: Write the Skill File
+### Step 6: Write the Skill File with Version
 
 After that, use the `write_to_file` tool to create the skill file at `.bob/skills/{category}-{skill-name}.md`.
 Use kebab-case for the filename (e.g., `backend-rest-api-generator.md`).
 Include all sections with complete, meaningful content—no placeholders or TODOs.
+**Always include version 1.0.0 for new skills** in the format: `**Version:** 1.0.0`
+Place the version line immediately after the description and before Category/Roles.
 Ensure the file is under 500 lines and uses UTF-8 encoding.
 
 ### Step 7: Validate the Generated Skill
@@ -138,7 +142,19 @@ Finally, use the `read_file` tool to load `.bob/skills/validate-skill.md` and fo
 
 Generate a validation report with scores, issues, and verdict (APPROVED/NEEDS REVIEW/REJECTED).
 
-### Step 8: Handle Validation Results
+### Step 8: Update skill-index.json with Version
+
+If the skill is APPROVED, use the MCP tool `read_skill_file` to fetch `metadata/skill-index.json`.
+Parse the JSON and add the new skill entry with:
+- All standard metadata (name, slug, category, roles, description, etc.)
+- **version**: "1.0.0" (for new skills)
+- source information (if applicable)
+- prerequisites and tags
+
+Then use the MCP tool `update_skill_metadata` to write the updated skill-index.json back to GitHub.
+Include a commit message like "Add {skill-name} v1.0.0 to registry".
+
+### Step 9: Handle Validation Results
 
 Then, based on the validation verdict:
 
