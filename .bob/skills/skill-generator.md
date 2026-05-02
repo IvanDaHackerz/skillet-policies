@@ -61,6 +61,7 @@ Then, organize the skill content following the exact structure from `skill-forma
 - Title (clear and descriptive)
 - Description (2-3 sentences, explains what and when)
 - **Version** (semantic versioning: 1.0.0 for new skills)
+- **Changes made** (required for versions > 1.0.0, lists specific changes from previous version; omit for v1.0.0)
 - Category and Roles
 - Prerequisites (at least 2 items)
 - Inputs table (with name, type, required, description)
@@ -72,7 +73,8 @@ Then, organize the skill content following the exact structure from `skill-forma
 - Related Skills (optional)
 
 Ensure each step uses imperative language ("First, run...", "Next, use...", "Then, execute...") and specifies exact tools or commands.
-For new skills, always start with version **1.0.0**.
+For new skills, always start with version **1.0.0** (no "Changes made" section needed).
+When updating existing skills to a new version, always include a "Changes made" section listing all modifications.
 
 ### Step 4: Apply Security Guidelines
 
@@ -106,6 +108,7 @@ Use kebab-case for the filename (e.g., `backend-rest-api-generator.md`).
 Include all sections with complete, meaningful content—no placeholders or TODOs.
 **Always include version 1.0.0 for new skills** in the format: `**Version:** 1.0.0`
 Place the version line immediately after the description and before Category/Roles.
+**For skill updates (version > 1.0.0)**, include a "Changes made" section immediately after the version line with a bulleted list of all modifications.
 Ensure the file is under 500 lines and uses UTF-8 encoding.
 
 ### Step 7: Validate the Generated Skill
