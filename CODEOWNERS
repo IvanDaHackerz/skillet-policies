@@ -1,0 +1,38 @@
+# Skillet Policies - Code Owners
+# 
+# This repository contains IMMUTABLE company policies and standards.
+# Only architects and C-level executives can approve changes.
+#
+# These policies govern how all skills are created and validated.
+# Changes here affect the entire organization's development standards.
+
+# Default owners for everything in the policies repo
+# STRICT: Only senior leadership can approve policy changes
+* @IvanDaHackerz
+
+# Rules and Standards - Require architect and C-level approval
+/rules/*.md @IvanDaHackerz
+# Example with team: /rules/*.md @architects @c-level
+
+# Bob Mode Configuration - Require architect approval
+/.bob/modes/*.md @IvanDaHackerz
+# Example with team: /.bob/modes/*.md @architects @tech-lead
+
+# Role Definitions - Require HR and tech lead approval
+/metadata/roles.json @IvanDaHackerz
+# Example with team: /metadata/roles.json @hr-team @tech-lead
+
+# Documentation - Require architect approval
+/README.md @IvanDaHackerz
+/docs/ @IvanDaHackerz
+
+# GitHub Configuration - Require repository admin
+/.github/ @IvanDaHackerz
+/CODEOWNERS @IvanDaHackerz
+
+# IMPORTANT: This repo should have the strictest branch protection:
+# - Require 2+ approvals from CODEOWNERS
+# - Require status checks to pass
+# - Require branches to be up to date
+# - Include administrators in restrictions
+# - Restrict who can push to matching branches

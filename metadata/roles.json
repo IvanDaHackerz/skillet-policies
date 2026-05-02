@@ -1,0 +1,66 @@
+{
+  "roles": [
+    {
+      "id": "backend",
+      "name": "Backend Developer",
+      "description": "Develops server-side logic, APIs, and database interactions",
+      "categories": ["backend", "shared"]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend Developer",
+      "description": "Develops user interfaces and client-side applications",
+      "categories": ["frontend", "shared"]
+    },
+    {
+      "id": "fullstack",
+      "name": "Full Stack Developer",
+      "description": "Works on both frontend and backend development",
+      "categories": ["backend", "frontend", "shared"]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps Engineer",
+      "description": "Manages infrastructure, CI/CD, and deployment processes",
+      "categories": ["devops", "shared"]
+    },
+    {
+      "id": "qa",
+      "name": "QA Engineer",
+      "description": "Ensures quality through testing and automation",
+      "categories": ["qa", "shared"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "backend",
+      "name": "Backend",
+      "description": "Server-side development skills",
+      "icon": "🔧"
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "description": "Client-side development skills",
+      "icon": "🎨"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "description": "Infrastructure and deployment skills",
+      "icon": "🚀"
+    },
+    {
+      "id": "qa",
+      "name": "QA",
+      "description": "Testing and quality assurance skills",
+      "icon": "✅"
+    },
+    {
+      "id": "shared",
+      "name": "Shared",
+      "description": "Skills useful across all roles",
+      "icon": "🤝"
+    }
+  ]
+}
