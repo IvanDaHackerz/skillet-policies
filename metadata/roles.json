@@ -1,4 +1,36 @@
 {
+  "tiers": [
+    {
+      "id": "junior",
+      "name": "Junior Developer",
+      "level": 1,
+      "description": "Entry-level developer learning fundamentals"
+    },
+    {
+      "id": "mid",
+      "name": "Mid-Level Developer",
+      "level": 2,
+      "description": "Experienced developer with proven capabilities"
+    },
+    {
+      "id": "senior",
+      "name": "Senior Developer",
+      "level": 3,
+      "description": "Expert developer with advanced skills and leadership"
+    },
+    {
+      "id": "lead",
+      "name": "Lead Developer",
+      "level": 4,
+      "description": "Technical leader guiding team architecture and decisions"
+    },
+    {
+      "id": "principal",
+      "name": "Principal Engineer",
+      "level": 5,
+      "description": "Strategic technical leader influencing organization-wide decisions"
+    }
+  ],
   "roles": [
     {
       "id": "backend",
